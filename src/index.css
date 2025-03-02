@@ -1,6 +1,31 @@
 @import "tailwindcss";
+
+:root {
+  --bg-color: #fcfcfc;
+  --second-bg-color: #f0f0f0;
+  --text-color: hsl(0, 0%, 0%);
+  --main-color: #808080;
+  transition: all 0.3s ease;
+}
+
+:root.dark {
+  --bg-color: #161616;
+  --second-bg-color: #262626;
+  --text-color: #e7e4e4;
+  --main-color: #7d7d7d;
+  transition: all 0.3s ease;
+}
+* {
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
 @layer base {
+  body {
+    @apply bg-[var(--bg-color)] text-[var(--text-color)] font-sans;
+  }
+}
+/* @layer base {
   body {
     font-family: sans-serif;
   }
-}
+} */

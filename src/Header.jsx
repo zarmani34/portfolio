@@ -1,11 +1,18 @@
 import React, { useRef, useState } from "react";
+import { FaMoon, FaSun } from "react-icons/fa";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const menuRef = useRef(null);
+  const [darkMode, setDarkMode] = useState(false);
 
   const handleMenuToggle = () => {
     setShowMenu(!showMenu);
+  };
+
+  
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    // document.documentElement.classList.toggle('dark');
   };
 
   return (
@@ -13,6 +20,13 @@ const Header = () => {
       <a href="#" className="text-2xl font-extrabold">
         Zarmani
       </a>
+      {/* Dark mode toggle button */}
+      <button
+        onClick={toggleDarkMode}
+        className="p-2 rounded-lg bg-[var(--second-bg-color)] text-[var(--text-color)] hover:opacity-80 transition-opacity duration-300"
+      >
+        {darkMode ? <FaMoon /> : <FaSun />}
+      </button>
       <div
         className="sm:hidden transition-all duration-500 z-10 cursor-pointer"
         id="menu-icon"

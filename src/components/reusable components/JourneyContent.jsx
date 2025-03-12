@@ -6,7 +6,7 @@ const JourneyContent = ({ date, tittle, institute, content }) => {
   return (
     <motion.div
       whileHover="hover"
-      className="border-2 border-[var(--main-color)] text-[var(--text-color)] bg-transparent p-2 rounded-2xl h-40 relative z-10 overflow-hidden"
+      className="border-2 border-[var(--main-color)] text-[var(--text-color)] bg-transparent p-2 rounded-2xl md:h-40 relative z-10 overflow-hidden"
     >
       <small className="text-[var(--main-color)] flex items-center justify-left pt-2 gap-2 ">
         <span>{<FaCalendar />}</span>

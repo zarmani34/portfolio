@@ -3,7 +3,7 @@ import { FaMoon, FaSun } from "react-icons/fa";
 import { motion } from "framer-motion";
 import SlideIn from "./reusable components/SlideIn";
 
-const NavBar = ({ showMenu, toggleDarkMode, darkMode, harmburgerRef }) => {
+const NavBar = ({ showMenu, toggleDarkMode, darkMode, harmburgerRef, inView }) => {
   console.log(harmburgerRef);
   return (
     <motion.nav
@@ -35,7 +35,7 @@ const NavBar = ({ showMenu, toggleDarkMode, darkMode, harmburgerRef }) => {
       md:!opacity-100 md:!visible md:!left-0
     `}
     >
-      <SlideIn />
+      <SlideIn inView={inView} />
       <motion.div
         initial={{ left: "-100%" }}
         animate={

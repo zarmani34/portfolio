@@ -2,7 +2,7 @@ import React from "react";
 import { motion, MotionConfig } from "framer-motion";
 import SlideIn from "./reusable components/SlideIn";
 
-const Harmburger = ({ showMenu, handleMenuToggle, harmburgerRef }) => {
+const Harmburger = ({ showMenu, handleMenuToggle, harmburgerRef, inView }) => {
   return (
     <motion.div
       // whileInView="slide"
@@ -13,7 +13,7 @@ const Harmburger = ({ showMenu, handleMenuToggle, harmburgerRef }) => {
         handleMenuToggle();
       }}
     >
-      <SlideIn />
+      <SlideIn inView={inView} />
       <MotionConfig transition={{ duration: 0.3 }}>
         <motion.div
           animate={

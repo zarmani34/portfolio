@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
-const SlideIn = ({ bg = "bg-[var(--bg-color)]" }) => {
-  const [ref, inView] = useScrollAnimation();
+const SlideIn = ({ bg = "bg-[var(--bg-color)]", inView }) => {
+  // const [ref, inView] = useScrollAnimation();
   return (
     <motion.span
-      ref={ref}
+      // ref={ref}
       initial={!inView ? { width: "100%" } : { width: 0 }}
       // variants={{
       //   slide: { width: 0 },

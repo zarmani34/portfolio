@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import ButtonSlideIn from "./ButtonSlideIn";
+import HoverSlideIn from "./HoverSlideIn";
 
 const Button = ({ children, handleClick }) => {
   return (
@@ -11,7 +11,7 @@ const Button = ({ children, handleClick }) => {
       className={`relative w-32 p-[.5rem] md:h-12 font-bold text-[var(--main-color)] border-2 border-[var(--main-color)] hover:text-[var(--bg-color)] rounded-lg my-4 cursor-pointer z-10 overflow-hidden transition-colors duration-400`}
     >
       {children}
-      <ButtonSlideIn />
+      <HoverSlideIn />
     </motion.button>
   );
 };

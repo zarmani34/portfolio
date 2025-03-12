@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Header from './components/Header'
 import About from './components/About'
 import Home from './components/Home'
+import MyJOurney from './components/MyJourney'
 
 function App() {
 
@@ -9,9 +10,8 @@ function App() {
     <>
       <Header />
       <Home />
-      {/* <div className='h-screen w-full bg-blue-400' /> */}
       <About />
-      {/* <div className='h-screen w-full bg-pink-400' /> */}
+      <MyJOurney />
     </>
   )
 }

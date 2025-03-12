@@ -35,7 +35,7 @@ const NavBar = ({ showMenu, toggleDarkMode, darkMode, harmburgerRef }) => {
       md:!opacity-100 md:!visible md:!left-0
     `}
     >
-      {!harmburgerRef && <SlideIn />}
+      <SlideIn />
       <motion.div
         initial={{ left: "-100%" }}
         animate={

@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const ButtonSlideIn = ({ bg='bg-[var(--main-color)]'}) => {
+const HoverSlideIn = ({ bg = "bg-[var(--main-color)]" }) => {
   return (
     <motion.span
       initial={{ width: 0 }}
@@ -14,4 +14,4 @@ const ButtonSlideIn = ({ bg='bg-[var(--main-color)]'}) => {
   );
 };
 
-export default ButtonSlideIn;
+export default HoverSlideIn;

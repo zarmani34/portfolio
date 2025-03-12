@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import Harmburger from "./Harmburger";
 import NavBar from "./NavBar";
+import SlideIn from "./reusable components/SlideIn";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -37,10 +39,15 @@ const Header = () => {
   };
 
   return (
-    <header className="p-4 md:px-[5%] relative flex items-center justify-between bg-[var(--bg-color)]">
-      <a href="#" className="text-2xl font-extrabold text-[var(--text-color)]">
+    <header className="py-4 px-8 sticky top-0 left-0 w-full z-50 flex items-center justify-between bg-[var(--bg-color)]">
+      <motion.a
+        // whileInView="slide"
+        href="#"
+        className="relative text-2xl font-extrabold text-[var(--text-color)]"
+      >
         Zarmani
-      </a>
+        <SlideIn />
+      </motion.a>
       <Harmburger
         showMenu={showMenu}
         handleMenuToggle={handleMenuToggle}

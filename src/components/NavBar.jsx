@@ -1,11 +1,14 @@
 import React from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { motion } from "framer-motion";
+import SlideIn from "./reusable components/SlideIn";
 
 const NavBar = ({ showMenu, toggleDarkMode, darkMode, harmburgerRef }) => {
+  console.log(harmburgerRef);
   return (
     <motion.nav
       initial={{ left: "-100%", opacity: 0, visibility: "hidden" }}
+      // whileInView="slide"
       animate={
         showMenu
           ? {
@@ -32,6 +35,7 @@ const NavBar = ({ showMenu, toggleDarkMode, darkMode, harmburgerRef }) => {
       md:!opacity-100 md:!visible md:!left-0
     `}
     >
+      {!harmburgerRef && <SlideIn />}
       <motion.div
         initial={{ left: "-100%" }}
         animate={
@@ -53,31 +57,31 @@ const NavBar = ({ showMenu, toggleDarkMode, darkMode, harmburgerRef }) => {
       />
 
       <motion.div
-        initial={harmburgerRef.current ? { x: "-20rem", opacity: 0 } : { x: 0, opacity: 1 }}
-        animate={harmburgerRef.current && showMenu &&{
-          x: showMenu ? 0 : "-20rem",
+        // initial={!harmburgerRef && { left: "-20rem", opacity: 0 } }
+        animate={{
+          left: showMenu ? 0 : "-20rem",
           opacity: showMenu ? 1 : 0,
         }}
         transition={{
-          duration: 0.2,
-          delay: showMenu ? 0.2 : 0,
+          duration: .2,
+          delay: showMenu ? .3 : 0,
         }}
-        className="md:!opacity-100 md:translate-x-[0] md:flex md:flex-row md:gap-2 text-base md:text-lg"
+        className="md:!opacity-100 md:translate-x-[0] md:flex md:flex-row md:gap-2 md:!items-center text-base md:text-lg relative md:!left-0"
       >
         <button
           onClick={toggleDarkMode}
-          className="pt-2 amber-200 text-[var(--text-color)] hover:text-[var(--main-color)] mr-4 cursor-pointer transition-all duration-500"
+          className="amber-200 text-[var(--text-color)] hover:text-[var(--main-color)] mr-4 cursor-pointer transition-all duration-500"
           aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
         >
           {darkMode ? (
-            <span className="flex flex-row-reverse md:flex-row items-center justify-center gap-2">
+            <span className="flex flex-row-reverse md:flex-row items-center justify-center p-3 gap-2">
               <span className="">
                 <FaSun />
               </span>
               <span className="">Light Mode</span>
             </span>
           ) : (
-            <span className="flex flex-row-reverse md:flex-row items-center justify-center gap-2">
+            <span className="flex flex-row-reverse md:flex-row items-center justify-center  gap-2 p-3">
               <span className="">
                 <FaMoon />
               </span>
@@ -85,15 +89,15 @@ const NavBar = ({ showMenu, toggleDarkMode, darkMode, harmburgerRef }) => {
             </span>
           )}
         </button>
-      {["Home", "About", "Education", "Skills", "Contact"].map((item) => (
+        {["Home", "About", "Education", "Skills", "Contact"].map((item) => (
         <motion.a
           key={item}
           href={`#${item.toLowerCase()}`}
-          className="block text-[var(--text-color)] hover:text-[var(--main-color)] transition-colors duration-500 cursor-pointer pt-2 md:!opacity-100 md:!translate-x-0"
+          className="block text-[var(--text-color)] hover:text-[var(--main-color)] transition-colors duration-500 cursor-pointer p-3 md:!opacity-100 md:!translate-x-0"
         >
           {item}
         </motion.a>
-      ))}
+        ))}
       </motion.div>
 
     </motion.nav>

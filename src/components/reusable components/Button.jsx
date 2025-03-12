@@ -1,5 +1,6 @@
 import React from "react";
-import { color, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import ButtonSlideIn from "./ButtonSlideIn";
 
 const Button = ({ children, handleClick }) => {
   return (
@@ -7,17 +8,10 @@ const Button = ({ children, handleClick }) => {
       whileHover="hover"
       whileTap={{ scale: 0.95 }}
       onClick={handleClick}
-      className="relative w-30 p-[.5rem] m-auto text-[.9rem] font-medium hover:text-[var(--main-color)] text-[var(--bg-color)] bg-[var(--main-color)] rounded-lg my-4 cursor-pointer z-10 overflow-hidden transition-colors duration-400"
+      className={`relative w-32 p-[.5rem] md:h-12 font-bold text-[var(--main-color)] border-2 border-[var(--main-color)] hover:text-[var(--bg-color)] rounded-lg my-4 cursor-pointer z-10 overflow-hidden transition-colors duration-400`}
     >
       {children}
-      <motion.span
-        initial={{ width: 0 }}
-        variants={{
-          hover: { scale: 1.05, width: "100%" },
-        }}
-        transition={{ duration: .4 }}
-        className="absolute top-0 left-0 h-full bg-[var(--bg-color)]  -z-10"
-      />
+      <ButtonSlideIn />
     </motion.button>
   );
 };

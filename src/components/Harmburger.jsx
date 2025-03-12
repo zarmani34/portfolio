@@ -1,19 +1,19 @@
 import React from "react";
 import { motion, MotionConfig } from "framer-motion";
+import SlideIn from "./reusable components/SlideIn";
 
-const Harmburger = ({ showMenu, handleMenuToggle, toggleNavAnimation, harmburgerRef }) => {
-    
-
+const Harmburger = ({ showMenu, handleMenuToggle, harmburgerRef }) => {
   return (
-    <div
+    <motion.div
+      // whileInView="slide"
       ref={harmburgerRef}
       className="md:hidden z-10 cursor-pointer"
       id="menu-icon"
-      onClick={ ()=>{
-        handleMenuToggle()
-        // toggleNavAnimation.start('slideIn')
-      } }
+      onClick={() => {
+        handleMenuToggle();
+      }}
     >
+      <SlideIn />
       <MotionConfig transition={{ duration: 0.3 }}>
         <motion.div
           animate={
@@ -27,7 +27,7 @@ const Harmburger = ({ showMenu, handleMenuToggle, toggleNavAnimation, harmburger
                   rotate: 0,
                 }
           }
-          className="w-7 h-1 bg-[var(--text-color)] my-1.5"
+          className="w-7 h-1 bg-[var(--text-color)] my-1.5 rounded-xl"
         />
         <motion.div
           animate={
@@ -39,7 +39,7 @@ const Harmburger = ({ showMenu, handleMenuToggle, toggleNavAnimation, harmburger
                   opacity: 1,
                 }
           }
-          className="w-7 h-1 bg-[var(--text-color)] my-1.5"
+          className="w-7 h-1 bg-[var(--text-color)] my-1.5 rounded-xl"
         />
         <motion.div
           animate={
@@ -53,10 +53,10 @@ const Harmburger = ({ showMenu, handleMenuToggle, toggleNavAnimation, harmburger
                   rotate: 0,
                 }
           }
-          className="w-7 h-1 bg-[var(--text-color)] my-1.5"
+          className="w-7 h-1 bg-[var(--text-color)] my-1.5 rounded-xl"
         />
       </MotionConfig>
-    </div>
+    </motion.div>
   );
 };
 

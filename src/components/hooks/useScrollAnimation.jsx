@@ -1,9 +1,9 @@
 import { useInView } from 'react-intersection-observer';
 
 // For scroll-based animations
- export const useScrollAnimation = () => {
+ export const useScrollAnimation = (defaultThreshHold=0.6) => {
   const [ref, inView] = useInView({
-    threshold: 0.6,
+    threshold: defaultThreshHold,
   });
 
   return [ref, inView];

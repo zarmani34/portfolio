@@ -12,6 +12,7 @@ function App() {
       <Home />
       <About />
       <MyJOurney />
+      <div className="w-full h-screen bg-red-200"></div>
     </>
   )
 }

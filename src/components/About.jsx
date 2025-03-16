@@ -21,7 +21,6 @@ const About = () => {
       </motion.h2>
 
       <motion.div
-        // whileInView="slide"
         className="w-48 h-48 relative m-auto flex items-center justify-center rounded-full my-4"
       >
         <img

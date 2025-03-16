@@ -5,7 +5,6 @@ import SlideIn from "./reusable components/SlideIn";
 const Harmburger = ({ showMenu, handleMenuToggle, harmburgerRef, inView }) => {
   return (
     <motion.div
-      // whileInView="slide"
       ref={harmburgerRef}
       className="md:hidden z-10 cursor-pointer"
       id="menu-icon"

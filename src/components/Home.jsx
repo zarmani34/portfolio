@@ -3,10 +3,10 @@ import Button from "./reusable components/Button";
 import InverseButton from "./reusable components/InverseButton";
 import SlideIn from "./reusable components/SlideIn";
 import {
-  FaGithubSquare,
-  FaInstagramSquare,
+  FaGithub,
+  FaInstagram,
   FaLinkedin,
-  FaTwitterSquare,
+  FaTwitter,
 } from "react-icons/fa";
 import SocialContainer from "./reusable components/SocialContainer";
 import { useScrollAnimation } from "./hooks/useScrollAnimation";
@@ -45,10 +45,10 @@ const Home = () => {
             <Button>Let's talk</Button>
           </div>
           <div className="absolute bottom-8 md:bottom-14 left-8 right-0 md:left-[8%] md:right-auto flex items-center justify-center gap-4">
-            <SocialContainer fa={<FaInstagramSquare />} />
-            <SocialContainer fa={<FaTwitterSquare />} />
+            <SocialContainer fa={<FaInstagram />} />
+            <SocialContainer fa={<FaTwitter />} />
             <SocialContainer fa={<FaLinkedin />} />
-            <SocialContainer fa={<FaGithubSquare />} />
+            <SocialContainer fa={<FaGithub />} />
             <SlideIn inView={inView} />
           </div>
         </div>

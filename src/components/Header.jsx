@@ -44,7 +44,7 @@ const Header = () => {
   return (
     <header
       ref={ref}
-      className="py-4 px-8 md:px-[8%] sticky top-0 left-0 w-full z-50 flex items-center justify-between bg-[var(--bg-color)]"
+      className="py-4 px-8 md:px-[4%] lg:px-[8%] sticky top-0 left-0 w-full z-50 flex items-center justify-between bg-[var(--bg-color)]"
     >
       <motion.a
         // whileInView="slide"

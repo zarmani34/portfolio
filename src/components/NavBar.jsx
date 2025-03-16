@@ -74,14 +74,14 @@ const NavBar = ({ showMenu, toggleDarkMode, darkMode, harmburgerRef, inView }) =
           aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
         >
           {darkMode ? (
-            <span className="flex flex-row-reverse md:flex-row items-center justify-center p-3 gap-2">
+            <span className="flex flex-row-reverse md:flex-row items-center justify-center p-3 gap-2 md:p-0">
               <span className="">
                 <FaSun />
               </span>
               <span className="">Light Mode</span>
             </span>
           ) : (
-            <span className="flex flex-row-reverse md:flex-row items-center justify-center  gap-2 p-3">
+            <span className="flex flex-row-reverse md:flex-row items-center justify-center  gap-2 p-3 md:p-0">
               <span className="">
                 <FaMoon />
               </span>
@@ -93,7 +93,7 @@ const NavBar = ({ showMenu, toggleDarkMode, darkMode, harmburgerRef, inView }) =
         <motion.a
           key={item}
           href={`#${item.toLowerCase()}`}
-          className="block text-[var(--text-color)] hover:text-[var(--main-color)] transition-colors duration-500 cursor-pointer p-3 md:!opacity-100 md:!translate-x-0"
+          className="block text-[var(--text-color)] hover:text-[var(--main-color)] transition-colors duration-500 cursor-pointer md:p-2 lg:p-3 z:!opacity-100 z:!translate-x-0"
         >
           {item}
         </motion.a>

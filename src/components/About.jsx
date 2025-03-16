@@ -13,7 +13,7 @@ const About = () => {
   return (
     <section
       ref={ref}
-      className="px-8 md:px-[8%] bg-[var(--second-bg-color)] w-full text-center py-[8%]"
+      className="px-8 md:px-[8%] bg-[var(--second-bg-color)] w-full text-center py-[8%] "
     >
       <motion.h2 className=" relative w-fit m-auto text-center text-4xl font-bold text-[var(--text-color)] ">
         About <span className="text-[var(--main-color)]">Me</span>

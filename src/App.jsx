@@ -14,7 +14,6 @@ function App() {
       <About />
       <MyJOurney />
       <Skills />
-      <div className="w-full h-screen bg-red-200"></div>
     </>
   )
 }

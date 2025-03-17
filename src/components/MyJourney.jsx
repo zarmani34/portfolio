@@ -9,9 +9,9 @@ const MyJOurney = () => {
   return (
     <section
       ref={ref}
-      className="px-8 md:px-[8%] py-[8%] w-full text-[var(--text-color)] "
+      className="px-8 md:px-[8%] py-[2%] w-full text-[var(--text-color)] "
     >
-      <h2 className="relative w-fit m-auto text-center flex-wrap text-4xl font-bold text-[var(--text-color)] py-[8%]">
+      <h2 className="relative w-fit m-auto text-center flex-wrap text-4xl font-bold text-[var(--text-color)] py-[4%]">
         My <span className="text-[var(--main-color)]">Journey</span>
         <SlideIn inView={inView} />
       </h2>

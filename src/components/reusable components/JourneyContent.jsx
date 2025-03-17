@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { FaCalendar } from "react-icons/fa";
 
+
 const JourneyContent = ({ date, tittle, institute, content }) => {
   return (
     <motion.div

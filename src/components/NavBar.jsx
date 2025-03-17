@@ -93,7 +93,7 @@ const NavBar = ({ showMenu, toggleDarkMode, darkMode, harmburgerRef, inView }) =
         <motion.a
           key={item}
           href={`#${item.toLowerCase()}`}
-          className="block text-[var(--text-color)] hover:text-[var(--main-color)] transition-colors duration-500 cursor-pointer md:p-2 lg:p-3 z:!opacity-100 z:!translate-x-0"
+          className="block text-[var(--text-color)] hover:text-[var(--main-color)] transition-colors duration-500 cursor-pointer p-3 md:p-2 lg:p-3 z:!opacity-100 z:!translate-x-0"
         >
           {item}
         </motion.a>

@@ -9,9 +9,9 @@ const Skills = () => {
   return (
     <section
       ref={ref}
-      className="px-8 md:px-[8%] py-[8%] w-full text-[var(--text-color)] bg-[var(--second-bg-color)] "
+      className="px-8 md:px-[8%] py-[2%] w-full text-[var(--text-color)] bg-[var(--second-bg-color)] "
     >
-      <h2 className="relative w-fit m-auto text-center flex-wrap text-4xl font-bold text-[var(--text-color)] py-[8%]">
+      <h2 className="relative w-fit m-auto text-center flex-wrap text-4xl font-bold text-[var(--text-color)] py-[4%]">
         My <span className="text-[var(--main-color)]">Skills</span>
         <SlideIn bg={"bg-[var(--second-bg-color)]"} inView={inView} />
       </h2>
@@ -49,7 +49,7 @@ const Skills = () => {
               </h3>
               <SkillContainer skill="Web design" percentage="90%" />
               <SkillContainer skill="Web development" percentage="85%" />
-              <SkillContainer skill="UI/UX" percentage="50%" />
+              <SkillContainer skill="UI/UX" percentage="60%" />
               <SkillContainer skill="SEO Marketing" percentage="50%" />
           </div>
           <SlideIn bg={"bg-[var(--second-bg-color)]"} inView={inView} />

@@ -13,7 +13,7 @@ const AnimatedTextarea = () => {
         rows="10"
         placeholder="Your Message"
         required
-        className="w-full resize-none p-2 border-2 border-[var(--main-color)] rounded-md placeholder:text-[var(--text-color)] relative z-10 bg-transparent"
+        className="w-full resize-none p-2 border-2 border-[var(--main-color)] rounded-md placeholder:text-[var(--text-color)] relative z-10 bg-transparent outline-0"
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
       ></textarea>

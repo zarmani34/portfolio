@@ -8,7 +8,7 @@ const AnimatedInput = ({ type, placeholder, required = true }) => {
       <div className="relative w-full">
         <input
           type={type}
-          className="w-full p-2 border-2 border-[var(--main-color)] rounded-md placeholder:text-[var(--text-color)] relative z-10 bg-transparent"
+          className="w-full p-2 border-2 border-[var(--main-color)] rounded-md placeholder:text-[var(--text-color)] relative z-10 bg-transparent outline-0"
           placeholder={placeholder}
           required={required}
           onFocus={() => setIsFocused(true)}

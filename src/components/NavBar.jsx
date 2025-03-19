@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { motion } from "framer-motion";
 import SlideIn from "./reusable components/SlideIn";
 
-const NavBar = ({ showMenu, toggleDarkMode, darkMode, harmburgerRef, inView }) => {
-  console.log(harmburgerRef);
+const NavBar = ({
+  showMenu,
+  toggleDarkMode,
+  darkMode,
+  inView,
+  activeSection,
+}) => {
   return (
     <motion.nav
       initial={{ left: "-100%", opacity: 0, visibility: "hidden" }}
-      // whileInView="slide"
       animate={
         showMenu
           ? {
@@ -63,8 +67,8 @@ const NavBar = ({ showMenu, toggleDarkMode, darkMode, harmburgerRef, inView }) =
           opacity: showMenu ? 1 : 0,
         }}
         transition={{
-          duration: .2,
-          delay: showMenu ? .3 : 0,
+          duration: 0.2,
+          delay: showMenu ? 0.3 : 0,
         }}
         className="md:!opacity-100 md:translate-x-[0] md:flex md:flex-row md:gap-2 md:!items-center text-base md:text-lg relative md:!left-0"
       >
@@ -90,16 +94,20 @@ const NavBar = ({ showMenu, toggleDarkMode, darkMode, harmburgerRef, inView }) =
           )}
         </button>
         {["Home", "About", "Education", "Skills", "Contact"].map((item) => (
-        <motion.a
-          key={item}
-          href={`#${item.toLowerCase()}`}
-          className="block text-[var(--text-color)] hover:text-[var(--main-color)] transition-colors duration-500 cursor-pointer p-3 md:p-2 lg:p-3 z:!opacity-100 z:!translate-x-0"
-        >
-          {item}
-        </motion.a>
+          <motion.a
+            key={item}
+            href={`#${item.toLowerCase()}`}
+            className={`block text-[var(--text-color)] hover:text-[var(--main-color)] transition-colors duration-500 cursor-pointer p-3 md:p-2 lg:p-3 z:!opacity-100 z:!translate-x-0`}
+            style={
+              activeSection === item.toLowerCase()
+                ? { color: "var(--main-color)" }
+                : { color: "var(--text-color)" }
+            }
+          >
+            {item}
+          </motion.a>
         ))}
       </motion.div>
-
     </motion.nav>
   );
 };

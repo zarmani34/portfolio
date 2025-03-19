@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SlideIn from "./reusable components/SlideIn";
 import { FaCalendar } from "react-icons/fa";
 import JourneyContent from "./reusable components/JourneyContent";
 import { useScrollAnimation } from "./hooks/useScrollAnimation";
 
-const MyJOurney = () => {
+const MyJOurney = ({setActiveSection}) => {
   const [ref, inView] = useScrollAnimation( 0.4);
+  useEffect(() => {
+      if (inView) {
+        setActiveSection('education')
+      }
+    },[inView, setActiveSection])
   return (
     <section
       ref={ref}
+      id="education"
       className="px-8 md:px-[8%] py-[2%] w-full text-[var(--text-color)] "
     >
       <h2 className="relative w-fit m-auto text-center flex-wrap text-4xl font-bold text-[var(--text-color)] py-[4%]">

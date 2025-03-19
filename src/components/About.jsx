@@ -1,18 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import SlideIn from "./reusable components/SlideIn";
 import Button from "./reusable components/Button";
 import { useScrollAnimation } from "./hooks/useScrollAnimation";
 
-const About = () => {
+const About = ({setActiveSection}) => {
   const [desc, setDesc] = useState(false);
+  const [ref, inView] = useScrollAnimation();
+  useEffect(() => {
+      if (inView) {
+        setActiveSection('about')
+      }
+    },[inView, setActiveSection])
   const handleDescription = () => {
     setDesc(!desc);
   };
-  const [ref, inView] = useScrollAnimation();
   return (
     <section
       ref={ref}
+      id="about"
       className="px-8 md:px-[8%] bg-[var(--second-bg-color)] w-full text-center py-[8%] "
     >
       <motion.h2 className=" relative w-fit m-auto text-center text-4xl font-bold text-[var(--text-color)] ">

@@ -15,13 +15,8 @@
 }
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-/* .nav-overlay {
-  transition-delay: 0.3s;
-}
-nav, .nav-overlay.closing {
-  transition-delay: 0s;
-} */
 
 @layer base {
   body {

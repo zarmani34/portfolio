@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useScrollAnimation } from "./hooks/useScrollAnimation";
 import SlideIn from "./reusable components/SlideIn";
 import SkillContainer from "./reusable components/SkillContainer";
 import { motion } from "framer-motion";
 
-const Skills = () => {
+const Skills = ({setActiveSection}) => {
   const [ref, inView] = useScrollAnimation();
+  useEffect(() => {
+        if (inView) {
+          setActiveSection('skills')
+        }
+      },[inView, setActiveSection])
   return (
     <section
       ref={ref}
+      id="skills"
       className="px-8 md:px-[8%] py-[2%] w-full text-[var(--text-color)] bg-[var(--second-bg-color)] "
     >
       <h2 className="relative w-fit m-auto text-center flex-wrap text-4xl font-bold text-[var(--text-color)] py-[4%]">

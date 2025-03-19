@@ -5,7 +5,7 @@ import NavBar from "./NavBar";
 import SlideIn from "./reusable components/SlideIn";
 import { useScrollAnimation } from "./hooks/useScrollAnimation";
 
-const Header = () => {
+const Header = ({activeSection}) => {
   const [showMenu, setShowMenu] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const harmburgerRef = useRef(null);
@@ -44,6 +44,7 @@ const Header = () => {
   return (
     <header
       ref={ref}
+      id="header"
       className="py-4 px-8 md:px-[4%] lg:px-[8%] sticky top-0 left-0 w-full z-50 flex items-center justify-between bg-[var(--bg-color)]"
     >
       <motion.a
@@ -66,8 +67,8 @@ const Header = () => {
         showMenu={showMenu}
         toggleDarkMode={toggleDarkMode}
         darkMode={darkMode}
-        harmburgerRef={harmburgerRef}
         inView={inView}
+        activeSection={activeSection}
       />
     </header>
   );

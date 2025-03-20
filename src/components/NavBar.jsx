@@ -1,15 +1,16 @@
-import React, { useEffect, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { motion } from "framer-motion";
 import SlideIn from "./reusable components/SlideIn";
 
 const NavBar = ({
+  navRef,
   showMenu,
   toggleDarkMode,
   darkMode,
   inView,
   activeSection,
 }) => {
+  
   return (
     <motion.nav
       initial={{ left: "-100%", opacity: 0, visibility: "hidden" }}
@@ -19,15 +20,16 @@ const NavBar = ({
               left: 0,
               opacity: 1,
               visibility: "visible",
-              transition: { duration: 0.2, delay: 0 },
+              transition: { duration: 0.3, delay: 0 },
             }
           : {
               left: "-100%",
               opacity: 0,
               visibility: "hidden",
-              transition: { duration: 0.2, delay: 0.2 },
+              transition: { duration: 0.3, delay: 0.2 },
             }
       }
+      ref={navRef}
       className={`
       p-2 font-bold md:!p-0 z-10
       absolute md:!relative 
@@ -48,13 +50,13 @@ const NavBar = ({
                 left: 0,
                 opacity: 1,
                 visibility: "visible",
-                transition: { duration: 0.2, delay: 0.2 },
+                transition: { duration: 0.3, delay: 0.2 },
               }
             : {
                 left: "-100%",
                 opacity: 0,
                 visibility: "hidden",
-                transition: { duration: 0.2, delay: 0 },
+                transition: { duration: 0.3, delay: 0 },
               }
         }
         className="absolute top-0 left-0 w-full h-full bg-[var(--bg-color)] -z-10 border-t-1 border-[var(--main-color)] text-[var(--text-color)] md:!border-none"

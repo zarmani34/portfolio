@@ -7,7 +7,7 @@ const AnimatedTextarea = () => {
   return (
     <div className="relative w-full">
       <textarea
-        name=""
+        name="message"
         id=""
         cols="30"
         rows="10"

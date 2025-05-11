@@ -23,3 +23,12 @@
     @apply bg-[var(--bg-color)] text-[var(--text-color)] font-sans;
   }
 }
+
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke: 0.7px var(--main-color);
+  }
+  .text-clip {
+    -webkit-background-clip: text;
+  }
+}

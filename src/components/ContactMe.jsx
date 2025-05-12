@@ -25,7 +25,7 @@ const ContactMe = ({ setActiveSection }) => {
     setLoading(true); // Set loading state to true while submitting
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/contact/", {
+      const response = await fetch("https://portfoliobackend-production-fb15.up.railway.app/api/contact/", {
         method: "POST",
         body: formData, // Send form data to the backend
       });

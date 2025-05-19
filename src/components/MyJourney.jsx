@@ -5,7 +5,7 @@ import JourneyContent from "./reusable components/JourneyContent";
 import { useScrollAnimation } from "./hooks/useScrollAnimation";
 
 const MyJourney = ({setActiveSection}) => {
-  const [ref, inView] = useScrollAnimation(0.4);
+  const [ref, inView] = useScrollAnimation(0.25);
   useEffect(() => {
       if (inView) {
         setActiveSection('education')

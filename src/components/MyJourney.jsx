@@ -33,7 +33,7 @@ const MyJourney = ({setActiveSection}) => {
             <div className="border-l-2 border-[var(--main-color)] pl-4 md:pl-8 flex flex-col gap-4 relative">
               <div className="relative">
                 <JourneyContent
-                  date={"2023"}
+                  date={"2024"}
                   tittle={"Certificate in Full Stack Web Development"}
                   institute={"TechAffrica"}
                   content={
@@ -44,7 +44,7 @@ const MyJourney = ({setActiveSection}) => {
               </div>
               <div className="relative">
                 <JourneyContent
-                  date={"2022"}
+                  date={"2023"}
                   tittle={"Diploma in Backend Development (Python)"}
                   institute={"HiiT Training Institute"}
                   content={
@@ -55,7 +55,7 @@ const MyJourney = ({setActiveSection}) => {
               </div>
               <div className="relative">
                 <JourneyContent
-                  date={"2022"}
+                  date={"2023"}
                   tittle={"Diploma in Frontend Development"}
                   institute={"HiiT Training Institute"}
                   content={
@@ -89,55 +89,44 @@ const MyJourney = ({setActiveSection}) => {
             <div className="border-l-2 border-[var(--main-color)] pl-4 md:pl-8 flex flex-col gap-4 relative">
               <div className="relative">
                 <JourneyContent
-                  date={"Nov 2023 - Present"}
+                  date={"Jul 2026 - Present"}
                   tittle={"Freelance Web Developer"}
                   institute={"Self-employed"}
                   content={
-                    "Collaborating with multiple clients to develop custom websites and web applications. Transforming client requirements into functional specifications and technical solutions while maintaining ongoing client relationships."
+                    "Delivering custom websites and web applications for clients, end to end from requirements to deployment. Maintaining long-term client relationships through responsive support and ongoing iteration."
                   }
                 />
                 <div className="absolute top-0 -left-6 md:-left-10 w-4 h-4 bg-[var(--main-color)] rounded-full" />
               </div>
               <div className="relative">
                 <JourneyContent
-                  date={"Jun 2023 - Nov 2023"}
-                  tittle={"Web Developer"}
-                  institute={"BISMAK EXCEL TECHNICAL SERVICES"}
-                  content={
-                    "Developed and maintained the company's website using Django and Python. Designed and implemented RESTful APIs for third-party service integration. Improved website loading speed by 45% through code optimization."
-                  }
-                />
-                <div className="absolute top-0 -left-6 md:-left-10 w-4 h-4 bg-[var(--main-color)] rounded-full" />
-              </div>
-              <div className="relative">
-                <JourneyContent
-                  date={"May 2023 - Jun 2023"}
+                  date={"Jun 2024 - Jul 2026"}
                   tittle={"Full Stack Developer"}
-                  institute={"ShopDrop (Project)"}
+                  institute={"BISMAK Excel Technical Services"}
                   content={
-                    "Engineered a React-based e-commerce platform with dynamic product listings and filter functionality. Built a comprehensive shopping cart system with Redux and implemented secure checkout flow with payment gateway integration."
+                    "Developed a full-stack business management portal with separate client, staff, and administrator workflows, role-based access control, real-time SSE notifications, and JWT authentication. Built RESTful APIs with Django REST Framework for invoices, certificates, document uploads, and technical reports, and deployed the frontend on Vercel and backend on Railway with production-ready configuration."
                   }
                 />
                 <div className="absolute top-0 -left-6 md:-left-10 w-4 h-4 bg-[var(--main-color)] rounded-full" />
               </div>
               <div className="relative">
                 <JourneyContent
-                  date={"Aug 2022 - Oct 2022"}
-                  tittle={"Frontend Developer"}
-                  institute={"StreamHaven (Project)"}
+                  date={"Sep 2023 - Jan 2024"}
+                  tittle={"Buzz It \u2013 Social Shout-Out Platform"}
+                  institute={"Project"}
                   content={
-                    "Developed a streaming platform using React, Tailwind CSS, and Firebase. Integrated OpenAI GPT API to create a personalized recommendation engine, increasing user engagement by 25%."
+                    "Designed a full-stack social platform for creating and viewing user shout-outs. Developed REST APIs with Django REST Framework for authentication and application data, protected dashboard flows using serializers and permissions, and built the frontend with reusable React components and API-driven state management."
                   }
                 />
                 <div className="absolute top-0 -left-6 md:-left-10 w-4 h-4 bg-[var(--main-color)] rounded-full" />
               </div>
-               <div className="relative">
+              <div className="relative">
                 <JourneyContent
-                  date={"Jun 2022 - Jul 2022"}
-                  tittle={"Frontend Developer"}
-                  institute={"Buzz-It (Project)"}
+                  date={"Sep 2023"}
+                  tittle={"Developer Portfolio"}
+                  institute={"Project"}
                   content={
-                    "Transformed complex Figma UI designs into a pixel-perfect, fully responsive web application. Implemented responsive design principles and reduced initial load time by 30% through code optimization."
+                    "Built a full-stack personal portfolio showcasing software projects, technical skills, and professional experience. Built a Django/DRF backend to serve portfolio data through RESTful APIs, connected it to a responsive React frontend, and deployed the frontend on GitHub Pages with backend services on Railway."
                   }
                 />
                 <div className="absolute top-0 -left-6 md:-left-10 w-4 h-4 bg-[var(--main-color)] rounded-full" />
